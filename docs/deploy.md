@@ -16,13 +16,13 @@
 
 ### 2. エンドポイント設定
 
-| 項目 | 設定値 |
-|---|---|
-| Source | GitHub → `https://github.com/bizenDao/generate_video` |
-| GPU Type | `ADA 24GB` または `ADA 32GB PRO` |
-| Container Disk | `180 GB` |
-| Min Workers | `0`（コスト節約）または `1`（常時起動） |
-| Max Workers | 用途に応じて設定 |
+| 項目           | 設定値                                                |
+| -------------- | ----------------------------------------------------- |
+| Source         | GitHub → `https://github.com/bizenDao/generate_video` |
+| GPU Type       | `ADA 24GB` または `ADA 32GB PRO`                      |
+| Container Disk | `180 GB`                                              |
+| Min Workers    | `0`（コスト節約）または `1`（常時起動）               |
+| Max Workers    | 用途に応じて設定                                      |
 
 ### 3. Network Volume（オプション）
 
@@ -53,7 +53,7 @@ client = GenerateVideoClient(
 
 result = client.create_video_from_image(
     image_path="./example_image.png",
-    prompt="running man, grab the gun",
+    prompt="girl in kimono picks up a clay bowl, turning it in her hands, dynamic movement",
     width=480,
     height=832,
     length=81,
@@ -68,7 +68,7 @@ result = client.create_video_from_image(
 ```json
 {
   "input": {
-    "prompt": "running man, grab the gun",
+    "prompt": "girl in kimono picks up a clay bowl, turning it in her hands, dynamic movement",
     "image_base64": "data:image/jpeg;base64,...",
     "seed": 42,
     "cfg": 2.0,
@@ -83,14 +83,17 @@ result = client.create_video_from_image(
 ## トラブルシューティング
 
 ### ビルドが失敗する場合
+
 - RunPodのビルドログを確認してください
 - Dockerfileで指定されているベースイメージが利用可能か確認してください
 
 ### Endpointがタイムアウトする場合
+
 - ComfyUIの起動に最大2分かかります（entrypoint.shで待機処理あり）
 - GPUのVRAMが不足している場合、より大きなGPUを選択してください
 
 ### LoRAが適用されない場合
+
 - Network Volumeがアタッチされているか確認
 - LoRAファイルが `/loras/` フォルダに配置されているか確認
 - `lora_pairs` のファイル名がVolume内のファイル名と一致しているか確認

@@ -1,1 +1,3 @@
 runpod_api_key="your-runpod-api-key"
+RUNPOD_API_KEY=your-api-key
+API_KEY="${RUNPOD_API_KEY:?RUNPOD_API_KEY

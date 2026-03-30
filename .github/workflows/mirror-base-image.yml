@@ -1,0 +1,22 @@
+name: Mirror base image to Docker Hub
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free up disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
+          df -h
+
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+      - name: Pull, tag and push
+        run: |
+          docker pull wlsdml1114/engui_genai-base_blackwell:1.1
+          docker tag wlsdml1114/engui_genai-base_blackwell:1.1 bizenyakiko/genai-base:1.1
+          docker push bizenyakiko/genai-base:1.1
