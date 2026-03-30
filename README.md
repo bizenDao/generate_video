@@ -1,9 +1,9 @@
 # Wan2.2 動画生成 APIクライアント
-[韓国語 README](README_kr.md) | [English README](README_en.md)
+[韓国語 README](docs/README_kr.md) | [English README](docs/README_en.md)
 
 本プロジェクトは、**Wan2.2** モデルを使用し、RunPodのgenerate_videoエンドポイントを通じて画像から動画を生成するPythonクライアントを提供します。Base64エンコーディング、LoRA設定、バッチ処理に対応しています。
 
-[![Runpod](https://api.runpod.io/badge/wlsdml1114/generate_video)](https://console.runpod.io/hub/wlsdml1114/generate_video)
+<!-- [![Runpod](https://api.runpod.io/badge/wlsdml1114/generate_video)](https://console.runpod.io/hub/wlsdml1114/generate_video) -->
 
 **Wan2.2** は、静止画を自然な動きとリアルなアニメーションで動画に変換する先進的なAIモデルです。ComfyUIをベースに構築されており、高品質な動画生成機能を提供します。
 
