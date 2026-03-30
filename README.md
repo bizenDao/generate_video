@@ -1,17 +1,11 @@
 # Wan2.2 動画生成 APIクライアント
-[한국어 README 보기](README_kr.md) | [English README](README_org.md)
+[韓国語 README](README_kr.md) | [English README](README_en.md)
 
 本プロジェクトは、**Wan2.2** モデルを使用し、RunPodのgenerate_videoエンドポイントを通じて画像から動画を生成するPythonクライアントを提供します。Base64エンコーディング、LoRA設定、バッチ処理に対応しています。
 
 [![Runpod](https://api.runpod.io/badge/wlsdml1114/generate_video)](https://console.runpod.io/hub/wlsdml1114/generate_video)
 
 **Wan2.2** は、静止画を自然な動きとリアルなアニメーションで動画に変換する先進的なAIモデルです。ComfyUIをベースに構築されており、高品質な動画生成機能を提供します。
-
-## 🎨 Engui Studio 連携
-
-[![EnguiStudio](https://raw.githubusercontent.com/wlsdml1114/Engui_Studio/main/assets/banner.png)](https://github.com/wlsdml1114/Engui_Studio)
-
-このWan2.2クライアントは主に **Engui Studio**（包括的なAIモデル管理プラットフォーム）向けに設計されています。API経由でも使用可能ですが、Engui Studioではより充実した機能と幅広いモデルサポートを提供します。
 
 ## ✨ 主な機能
 

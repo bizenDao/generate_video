@@ -1,5 +1,5 @@
 # Wan2.2 Generate Video API Client
-[한국어 README 보기](README_kr.md)
+[日本語 README](README.md) | [Korean README](README_kr.md)
 
 This project provides a Python client for generating videos from images using **Wan2.2** model through RunPod's generate_video endpoint. The client supports base64 encoding, LoRA configurations, and batch processing capabilities.
 
